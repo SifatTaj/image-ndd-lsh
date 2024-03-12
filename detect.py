@@ -22,7 +22,7 @@ def calculate_signature(image_file: str, hash_size: int) -> np.ndarray:
     """
     pil_image = Image.open(image_file).convert("L").resize(
                         (hash_size+1, hash_size),
-                        Image.ANTIALIAS)
+                        Image.LANCZOS)
     dhash = imagehash.dhash(pil_image, hash_size)
     signature = dhash.hash.flatten()
     pil_image.close()

@@ -4,3 +4,4 @@
 preprocessing/
 .idea
 venv
+sampled_CIFAR-100/
